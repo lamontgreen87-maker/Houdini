@@ -4,7 +4,7 @@ This document lists the critical components required to assemble the Gatling V1 
 
 | Category | Component | Purpose | Vendor Link |
 | :--- | :--- | :--- | :--- |
-| **Light Power** | Ushio 1310/1550nm Combiner | Dual-wavelength NIR "Power Supply" | [Ushio NIR](https://www.ushio.com/product/laser-diodes/) |
+| **Light Power** | Ushio 1310/1550nm Combiner | Dual-wavelength NIR "Power Supply" | [Ushio NIR](https://www.ushio.com/product/pd-ld-laser-combiner-single-mode-1310-1550nm/) |
 | **Driver** | Thorlabs CLD1010LP | Current & TEC Thermal Control | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) |
 | **Collimator** | Thorlabs PAF2-A15C | Achromatic FiberPort Alignment | [Thorlabs PAF2-A15C](https://www.thorlabs.com/item/PAF2A-A15C) |
 | **The ALU** | DLP3010EVM-LC | 32kHz Photonic Weight Modulation | [TI DLP3010EVM](https://www.ti.com/tool/DLP3010EVM-LC) |
