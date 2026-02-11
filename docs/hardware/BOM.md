@@ -6,7 +6,7 @@ This document lists the critical components required to assemble the Gatling V1 
 | :--- | :--- | :--- | :--- |
 | **Light Source** | Ushio 1310/1550nm Combiner | Dual-wavelength NIR "Power Supply" | [Ushio NIR](https://www.ushio.com/) |
 | **Laser Driver** | Thorlabs CLD1010LP | Current & TEC Thermal Control | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) |
-| **Collimator** | Thorlabs PAF2-A15C FiberPort | Achromatic 1310/1550nm Beam Alignment | [Thorlabs PAF2-A15C]([https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C](https://www.thorlabs.com/item/PAF2A-A15C)) |
+| **Collimator** | Thorlabs PAF2-A15C FiberPort | Achromatic 1310/1550nm Beam Alignment | [Thorlabs PAF2-A15C]((https://www.thorlabs.com/item/PAF2A-A15C)) |
 | **The ALU** | DLP3010EVM-LC | 32kHz Photonic Weight Modulation | [TI DLP3010EVM](https://www.ti.com/tool/DLP3010EVM-LC) |
 | **The Adder** | 75mm NIR PCX Lens | Optical Summation (GEMM Core) | [Thorlabs PCX](https://www.thorlabs.com/) |
 | **Data Bridge** | ADS52J90 Evaluation Module | 19.2 Gbps ADC-to-FPGA Interface | [TI ADS52J90EVM](https://www.ti.com/tool/ADS52J90EVM) |
