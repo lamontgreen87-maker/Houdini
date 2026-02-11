@@ -82,9 +82,7 @@ The Gatling V1 demonstrates that **spatial light modulation** is the key to brea
 
 ---
 
-## **12. Bill of Materials (BOM)**
-| Category | Component | 
-| :--- | :--- |
+
 | **Laser Driver** | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) | 
 | **Collimator** | [Thorlabs PAF2-A15C FiberPort]([https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C](https://www.thorlabs.com/item/PAF2A-A15C) | 
 | **ALU** | [DLP3010 DMD](https://www.ti.com/product/DLP3010) | 
