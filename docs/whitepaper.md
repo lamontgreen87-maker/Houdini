@@ -86,7 +86,7 @@ The Gatling V1 demonstrates that **spatial light modulation** is the key to brea
 | Category | Component | 
 | :--- | :--- |
 | **Laser Driver** | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) | 
-| **Collimator** | [Thorlabs PAF2-A15C FiberPort](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) | 
+| **Collimator** | [Thorlabs PAF2-A15C FiberPort]([https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C](https://www.thorlabs.com/item/PAF2A-A15C) | 
 | **ALU** | [DLP3010 DMD](https://www.ti.com/product/DLP3010) | 
 | **Bridge** | [ADS52J90 Evaluation Module](https://www.ti.com/tool/ADS52J90EVM) | 
 | **Brain** | [Arty Z7-20 SoC FPGA](https://digilent.com/reference/programmable-logic/arty-z7/start) |
