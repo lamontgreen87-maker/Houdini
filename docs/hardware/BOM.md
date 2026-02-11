@@ -6,7 +6,7 @@ This document lists the critical components required to assemble the Gatling V1 
 | :--- | :--- | :--- | :--- |
 | **Light Power** | Ushio 1310/1550nm Combiner | Dual-wavelength NIR "Power Supply" | [Ushio NIR](https://www.ushio.com/product/laser-diodes/) |
 | **Driver** | Thorlabs CLD1010LP | Current & TEC Thermal Control | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) |
-| **Collimator** | Thorlabs PAF2-A15C | Achromatic FiberPort Alignment | [Thorlabs PAF2-A15C](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) |
+| **Collimator** | Thorlabs PAF2-A15C | Achromatic FiberPort Alignment | [Thorlabs PAF2-A15C](https://www.thorlabs.com/item/PAF2A-A15C) |
 | **The ALU** | DLP3010EVM-LC | 32kHz Photonic Weight Modulation | [TI DLP3010EVM](https://www.ti.com/tool/DLP3010EVM-LC) |
 | **The Adder** | 75mm NIR PCX Lens | Optical Summation (GEMM Core) | [Thorlabs NIR Optics](https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=112) |
 | **The Retina** | Hamamatsu G11097-0606S | 6x6 InGaAs Detector Array (Use 4x4) | [Hamamatsu InGaAs](https://www.hamamatsu.com/us/en/product/optical-sensors/image-sensor/ingaas-image-sensor/ingaas-area-image-sensor/G11097-0606S.html) |
