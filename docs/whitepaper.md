@@ -28,7 +28,7 @@ The Gatling V1 functions as a **Photonic Inference Engine**.
 ---
 
 ## **5. Hardware Specification: The Optical Column**
-[Image of an optical cage system with lenses and a laser aligned along four steel rods]
+
 * **Source:** Dual-wavelength 1310/1550nm Combiner managed by a [Thorlabs CLD1010LP Driver](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP).
 * **Collimation:** A [Thorlabs PAF2-A15C FiberPort](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) ensures that both 1310nm and 1550nm math threads are perfectly parallel, eliminating chromatic focal shift.
 
@@ -54,7 +54,7 @@ The 512MB DDR3 RAM on the [Arty Z7-20](https://digilent.com/reference/programmab
 ---
 
 ## **8. Structural Design: Cage & Rail System**
-[Image of an optical rail system showing carriers and brackets for lens and mirror alignment]
+
 The core is housed in a **30mm Rigid Cage System** mounted on **Thorlabs RLA Dovetail Rails**. Precision **45-degree Fixed Angle Brackets** steer the "Math Column" into a **Marktech InGaAs Grid** with sub-micron stability.
 
 ---
@@ -68,4 +68,25 @@ The core is housed in a **30mm Rigid Cage System** mounted on **Thorlabs RLA Dov
 ---
 
 ## **10. Safety Protocols**
-Operation of
+Operation of invisible Class 3B NIR lasers requires [Honeywell XC Laser Safety Glasses](https://sps.honeywell.com/us/en/products/safety/personal-protective-equipment/eye-and-face-protection/laser-safety-eyewear) with an **OD 5+ rating**.
+
+---
+
+## **11. Conclusion: The Future of DLP & Theoretical Horizon**
+The Gatling V1 demonstrates that **spatial light modulation** is the key to breaking the Von Neumann bottleneck. While current iterations rely on the **32kHz** flip-rate of MEMS-based DMDs, the future of this architecture lies in **Phase-Only Modulators** and **Liquid Crystal on Silicon (LCoS)** which promise higher spatial resolutions and lower power profiles.
+
+#### **Theoretical Trajectory**
+* **Beyond Binary:** Future "Gatling" iterations will move beyond binary mirror states to **Continuous Phase Modulation**, allowing for complex-valued tensor contractions without the need for diffractive dithering.
+* **Terabit Scaling:** By integrating **Wavelength Division Multiplexing (WDM)**, theoretical architectures could scale to **112+ concurrent math threads** in the same physical optical path.
+* **The Singularity Engine:** Ultimately, this leads to a **Passive Photonic Processor** capable of simulating 11-dimensional M-theory manifolds in real-time, providing the computational bedrock for a new era of physics and artificial intelligence.
+
+---
+
+## **12. Bill of Materials (BOM)**
+| Category | Component | 
+| :--- | :--- |
+| **Laser Driver** | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) | 
+| **Collimator** | [Thorlabs PAF2-A15C FiberPort](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) | 
+| **ALU** | [DLP3010 DMD](https://www.ti.com/product/DLP3010) | 
+| **Bridge** | [ADS52J90 Evaluation Module](https://www.ti.com/tool/ADS52J90EVM) | 
+| **Brain** | [Arty Z7-20 SoC FPGA](https://digilent.com/reference/programmable-logic/arty-z7/start) |
