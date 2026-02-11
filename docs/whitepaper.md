@@ -38,7 +38,7 @@ The Gatling V1 functions as a **Photonic Inference Engine**.
 The system sustains a **19.2 Gbps** data flood via the [ADS52J90 ADC](https://www.ti.com/tool/ADS52J90EVM) into the [Arty Z7-20 SoC](https://digilent.com/reference/programmable-logic/arty-z7/start).
 * **The Bridge:** High-speed data is moved via **AXI_HP (High Performance)** ports, capable of **~1.2 GB/s** per port.
 * **The Flow:** Two AXI_HP ports are used simultaneously to move the optical math stream into the onboard **512MB DDR3 memory** with zero dropped packets.
-**To handle the 19.2 Gbps deserialization, the design utilizes ISERDESE2 primitives in NETWORKING mode. The challenge remains in the clock domain crossing (CDC) between the DMD's 32kHz PWM cycle and the 100MHz ADC sampling clock. We are evaluating the use of an MMCM (Mixed-Mode Clock Manager) to generate a phase-aligned trigger.**
+  To handle the 19.2 Gbps deserialization, the design utilizes ISERDESE2 primitives in NETWORKING mode. The challenge remains in the clock domain crossing (CDC) between the DMD's 32kHz PWM cycle and the 100MHz ADC sampling clock. We are evaluating the use of an MMCM (Mixed-Mode Clock Manager) to generate a phase-aligned trigger.
 ---
 
 ## **7. Memory Mapping: Zero-Copy Architecture**
