@@ -28,12 +28,20 @@ The Gatling V1 functions as a **Photonic Inference Engine**.
 ---
 
 ## **5. Hardware Specification: The Optical Column**
+[Image of an optical cage system with lenses and a laser aligned along four steel rods]
 * **Source:** Dual-wavelength 1310/1550nm Combiner managed by a [Thorlabs CLD1010LP Driver](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP).
 * **Collimation:** A [Thorlabs PAF2-A15C FiberPort](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) ensures that both 1310nm and 1550nm math threads are perfectly parallel, eliminating chromatic focal shift.
 
 ---
 
-## **6. Memory Mapping: Zero-Copy Architecture**
+## **6. Data Throughput & The SoC Bridge**
+The system sustains a **19.2 Gbps** data flood via the [ADS52J90 ADC](https://www.ti.com/tool/ADS52J90EVM) into the [Arty Z7-20 SoC](https://digilent.com/reference/programmable-logic/arty-z7/start).
+* **The Bridge:** High-speed data is moved via **AXI_HP (High Performance)** ports, capable of **~1.2 GB/s** per port.
+* **The Flow:** Two AXI_HP ports are used simultaneously to move the optical math stream into the onboard **512MB DDR3 memory** with zero dropped packets.
+
+---
+
+## **7. Memory Mapping: Zero-Copy Architecture**
 The 512MB DDR3 RAM on the [Arty Z7-20](https://digilent.com/reference/programmable-logic/arty-z7/start) is strictly segmented to isolate the **19.2 Gbps** photonic data flood from the PetaLinux kernel.
 
 | Physical Address Range | Logical Zone | Function |
@@ -45,12 +53,13 @@ The 512MB DDR3 RAM on the [Arty Z7-20](https://digilent.com/reference/programmab
 
 ---
 
-## **7. Structural Design: Cage & Rail System**
+## **8. Structural Design: Cage & Rail System**
+[Image of an optical rail system showing carriers and brackets for lens and mirror alignment]
 The core is housed in a **30mm Rigid Cage System** mounted on **Thorlabs RLA Dovetail Rails**. Precision **45-degree Fixed Angle Brackets** steer the "Math Column" into a **Marktech InGaAs Grid** with sub-micron stability.
 
 ---
 
-## **8. Technical FAQ**
+## **9. Technical FAQ**
 * **Q: Can it really run Doom while solving tensors?**
   * **A:** Yes. Because results are injected into the **Math Buffer** via DMA, the ARM CPU cycles used for game logic are never interrupted by the raw data flood.
 * **Q: Why use 1310nm and 1550nm?**
@@ -58,16 +67,5 @@ The core is housed in a **30mm Rigid Cage System** mounted on **Thorlabs RLA Dov
 
 ---
 
-## **9. Safety Protocols**
-Operation of invisible Class 3B NIR lasers requires [Honeywell XC Laser Safety Glasses](https://sps.honeywell.com/us/en/products/safety/personal-protective-equipment/eye-and-face-protection/laser-safety-eyewear) with an **OD 5+ rating**.
-
----
-
-## **10. Bill of Materials (BOM)**
-| Category | Component | 
-| :--- | :--- |
-| **Laser Driver** | [Thorlabs CLD1010LP](https://www.thorlabs.com/thorproduct.cfm?partnumber=CLD1010LP) | 
-| **Collimator** | [Thorlabs PAF2-A15C FiberPort](https://www.thorlabs.com/thorproduct.cfm?partnumber=PAF2-A15C) | 
-| **ALU** | [DLP3010 DMD](https://www.ti.com/product/DLP3010) | 
-| **Bridge** | [ADS52J90 Evaluation Module](https://www.ti.com/tool/ADS52J90EVM) | 
-| **Brain** | [Arty Z7-20 SoC FPGA](https://digilent.com/reference/programmable-logic/arty-z7/start) |
+## **10. Safety Protocols**
+Operation of
