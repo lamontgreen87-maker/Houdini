@@ -12,5 +12,5 @@ This document lists the critical components required to assemble the Gatling V1 
 | **The Retina** | Hamamatsu G11097-0606S | 6x6 InGaAs Detector Array (Use 4x4) | [Hamamatsu InGaAs](https://www.hamamatsu.com/us/en/product/optical-sensors/image-sensor/ingaas-image-sensor/ingaas-area-image-sensor/G11097-0606S.html) |
 | **Pre-Amp** | TI OPA855 | High-speed TIA (Light-to-Voltage) | [TI OPA855](https://www.ti.com/product/OPA855) |
 | **Bridge** | ADS52J90 EVM | 19.2 Gbps ADC-to-FPGA Interface | [TI ADS52J90EVM](https://www.ti.com/tool/ADS52J90EVM) |
-| **The Brain** | Arty Z7-20 SoC FPGA | Zynq-7000 Memory Controller | [Digilent Arty Z7](https://digilent.com/reference/programmable-logic/arty-z7/start) |
+| **The Brain** | **Avnet ZedBoard (Z7020)** | **Native FMC Interface & LVDS Support** | [ZedBoard | Avnet Boards](https://www.avnet.com/americas/products/avnet-boards/avnet-board-families/zedboard/) |
 | **Safety** | Honeywell XC Glasses | OD 5+ NIR Protection (1310-1550nm) | [Honeywell Safety](https://sps.honeywell.com/us/en/products/safety/personal-protective-equipment/eye-and-face-protection/laser-safety-eyewear) |
