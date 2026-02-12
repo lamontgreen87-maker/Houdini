@@ -1,52 +1,53 @@
 # Gatling V1: Photonic Tensor Accelerator
-**A Hybrid SoC-Photonic Inference Engine for 4D Tensor Contraction**
 
-[![Project Status: Research](https://img.shields.io/badge/Status-Research--Design-blueviolet)](https://github.com/your-username/gatling-v1)
-[![Hardware: Arty Z7-20](https://img.shields.io/badge/Hardware-Arty--Z7--20-orange)](https://digilent.com/reference/programmable-logic/arty-z7/start)
-[![Architecture: Zynq-7000](https://img.shields.io/badge/Architecture-Zynq--7000-red)](https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html)
+**A grassroots response to the AI Energy Crisis.**
 
-Gatling V1 is a **high-integrity photonic co-processor** designed to offload General Matrix Multiply-Accumulate (GEMM) operations to a passive optical core. By leveraging **Diffractive Dithering** and a dual-wavelength NIR column, it performs tensor contractions at the speed of light with a deterministic **19.2 Gbps throughput**.
+The Gatling V1 is an open-source, high-density optical computing engine built using off-the-shelf components. While the industry giants are reopening nuclear plants to power traditional silicon, we are utilizing the physics of light to perform massive parallel matrix multiplication at a fraction of the power cost.
+
+
+
+## 1. The Core Insight: Logic in the Flippers
+Traditional GPUs are limited by **Temporal Scaling** (clock speeds). The Gatling V1 utilizes **Spatial Scaling**. 
+* **The Multiplier:** A Digital Micromirror Device (DMD) acting as a spatial light modulator.
+* **The Adder:** A passive convex lens that performs summation via photonic superposition (zero-latency).
+* **The Result:** High-speed InGaAs sensors that capture the vector result at 100MHz.
+
+## 2. Technical Specifications (Phase 1 Prototype)
+| Component | Specification |
+| :--- | :--- |
+| **Core Processor** | TI DLP3010 DMD (Micromirror Array) |
+| **Spectral Range** | 1000nm - 1600nm (NIR) |
+| **Sampling Rate** | 100 MSPS (via ADS52J90) |
+| **Control Logic** | Xilinx Zynq-7000 SoC (Arty Z7-20) |
+| **Power Envelope** | < 60 Watts |
+
+
+
+## 3. Developer Interface: Memory Map
+The Gatling Engine is exposed to the Zynq ARM processor as a memory-mapped peripheral via AXI-Lite.
+
+**Base Address:** `0x43C00000`
+
+| Offset | Register | Access | Description |
+| :--- | :--- | :--- | :--- |
+| `0x00-0x3C`| **CH_00-15** | RO | Photonic Result: Sensors (0,0) through (3,3) |
+| `0x40` | **CONTROL** | RW | Bit 0: Trigger Capture |
+| `0x44` | **STATUS** | RO | Bit 0: Capture Complete / Data Valid |
+
+
+
+## 4. Why This Exists
+Modern AI is hitting a "Power Wall." We believe the solution isn't "better" silicon, but **smarter physics**. 
+1. **No Lab-Tech Required:** We don't use custom-etched photonics. We use parts you can buy on DigiKey or rip out of a projector.
+2. **Zero-Heat Summation:** Adding 1,000 numbers in silicon generates heat. Adding 1,000 rays of light in a lens generates **zero heat**.
+3. **Decentralized AI:** By lowering the power and cost of inference, we move AI from massive server farms back to the edge.
+
+
+
+## 5. Getting Started
+* See `/docs/analysis/compute_density.md` for the mathematical proof of equivalent throughput.
+* See `/hardware/hdl/` for the Verilog capture engine and AXI wrappers.
+* See `/scripts/calibration/` for the linearity proof script.
 
 ---
-
-## 🚀 Key Specifications
-* **Optical ALU:** DLP3010 DMD with 32kHz refresh rate.
-* **Instruction Bus:** Dual-wavelength 1310nm/1550nm Achromatic Column.
-* **Data Bridge:** 16-channel [ADS52J90 100MSPS ADC](https://www.ti.com/product/ADS52J90).
-* **SoC Interface:** Zynq-7020 via Dual AXI_HP ports (1.2 GB/s each).
-* **OS Support:** PetaLinux (Zynq-7000 ARM Cortex-A9).
-
----
-
-## 🧠 Memory Mapping (Zero-Copy Architecture)
-The 512MB DDR3 RAM is strictly segmented to isolate the high-speed math flood from the Linux kernel.
-
-| Physical Address Range | Logical Zone      | Description                                  |
-| :--------------------- | :---------------- | :------------------------------------------- |
-| `0x0000_0000` - `0x01FF_FFFF` | **OS Reserved** | PetaLinux Kernel / RootFS / Legacy Tasks.    |
-| `0x0200_0000` - `0x1FFF_FFFF` | **Math Buffer** | **DMA Injection Zone.** 4x4 Tensor results.  |
-| `0x2000_0000` - `0x3FFF_FFFF` | **User Space** | Application Logic and Python Pattern Gen.    |
-| `0x43C0_0000`          | **Control Regs** | AXI-Lite registers for Laser/DMD/ADC Sync.   |
-
----
-
-## 🛠 Project Structure
-* `/docs`: Detailed [Whitepaper](docs/whitepaper.md) and Technical Manifesto.
-* `/hdl`: Verilog/VHDL source for AXI_HP DMA and LVDS ADC interfacing.
-* `/sw`: Python scripts for generating **Diffractive Dithering** patterns.
-* `/hardware`: XDC constraints and 30mm Cage System assembly diagrams.
-
----
-
-## ⚠️ Safety Warning
-This project utilizes **Invisible Class 3B Near-Infrared (NIR) Lasers** (1310nm/1550nm). 
-* **OD 5+ Laser Safety Eyewear** is mandatory for all alignment procedures.
-* Never view the "Instruction Column" directly; use IR viewing cards only.
-
----
-
-## 📜 Acknowledgements
-* Built for high-performance physics simulation and real-time AI inference.
-* Special thanks to the **r/FPGA** community for the architecture red-teaming.
-
----
+**The Challenge:** We aren't waiting for the future. We're building it with what's on the table.
